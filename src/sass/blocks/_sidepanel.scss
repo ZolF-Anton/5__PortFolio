@@ -1,0 +1,51 @@
+.sidepanel {
+    position: fixed;
+    top: 60px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 340px;
+    z-index: 5  ;
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #212121;
+    }
+    &__social {
+        height: 150px;
+        width: 25px;
+        span {
+            transform: rotate(-100grad) translate(-30%, -260%);
+            display: block;
+            width: 150px;
+            color: #212121;
+
+        }
+       
+    }
+}
+
+.svg_telegram {
+    width: 22px;
+    height: 22px;
+    background-color:#212121;
+    display: block;
+    -webkit-mask-image: url('../icon/social/telegram.svg');
+    mask-image: url('../icon/social/telegram.svg');
+    transform: rotate(-90deg);
+    &:hover {
+        background-color: rgb(36, 103, 165);
+    }
+}
+.svg_instagram {
+    fill:#21212160;
+    :hover {
+        
+	    fill: rgba(243, 11, 11, 0.068);
+    }
+}
+.svg_facebook_inner {
+    fill: yellowgreen;
+}

@@ -2,12 +2,15 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/main_bg_1-75-1.jpg') no-repeat 50%/cover    ;
-    padding-top: 205px;
+    padding: 145px 0 0 100px;
     &__title {
         width: 535px;
         margin-top: 10px;
     }
     &__subtitle {
+        position: relative;
+        padding-left:10px;
+        z-index: 10;
         @include before_circle;
     }
     &__btns {

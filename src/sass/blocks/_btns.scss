@@ -7,4 +7,10 @@
         background-color: transparent;
         box-shadow: none;
     }
+    &_disabled {
+        fill: rgba(8, 221, 203, 0.397);
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
 }
