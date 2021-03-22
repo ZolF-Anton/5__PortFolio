@@ -4,10 +4,10 @@
     left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 340px;
-    z-index: 5  ;
+    z-index: 5;
     &__divider {
         width: 2px;
         height: 70px;
@@ -21,31 +21,44 @@
             display: block;
             width: 150px;
             color: #212121;
-
         }
-       
+    }
+    &__link svg {
+        transition: ease-in 750ms;
+        width: 22px;
+        height: 22px;
+        &:hover {
+            transition: ease-in 750ms;
+            transform: rotate(90deg);
+        }
+    }
+}
+.svg_github svg {
+    fill: #212121cc;
+    &:hover {
+        fill: #0f0f0f;
     }
 }
 
-.svg_telegram {
-    width: 22px;
-    height: 22px;
-    background-color:#212121;
-    display: block;
-    -webkit-mask-image: url('../icon/social/telegram.svg');
-    mask-image: url('../icon/social/telegram.svg');
+.svg_facebook svg {
+    fill: rgb(50, 91, 205);
+    &:hover {
+        fill: #21212180;
+    }
+}
+
+.svg_instagram svg {
+    fill: rgba(189, 27, 221, 0.473);
+    &:hover {
+        fill: #21212180;
+    }
+}
+
+.svg_telegram svg {
+    fill: rgb(36, 103, 165);
     transform: rotate(-90deg);
     &:hover {
-        background-color: rgb(36, 103, 165);
+        fill: #21212180;
+        transform: rotate(0deg);
     }
-}
-.svg_instagram {
-    fill:#21212160;
-    :hover {
-        
-	    fill: rgba(243, 11, 11, 0.068);
-    }
-}
-.svg_facebook_inner {
-    fill: yellowgreen;
 }
