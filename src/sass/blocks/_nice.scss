@@ -1,0 +1,78 @@
+#yin-yang {
+    width: 40px;
+    height: 40px;
+    background: $main-color;
+    border-color: #212529;
+    border-style: solid;
+    border-width: 2px 2px 22px 2px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 20px);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: $main-color;
+        border: 6px solid #212529;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #212529;
+        border: 6px solid $main-color;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.shiny {
+    background-color: #0070c9;
+    //padding: 10px;
+    //padding-left: 20px;
+    color: white;
+    border-radius: 25px;
+    transition: 200ms ease-in;
+    overflow: hidden;
+    position: relative;
+    min-width: 150px;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -9em);
+    }
+}
+
+.shiny:hover {
+    transform: scale(1.1);
+}
+
+.shiny::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(229, 172, 142, 0),
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(229, 172, 142, 0)
+    );
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+.shiny:hover::after,
+.shiny:focus::after {
+    animation: sheen 1s forwards;
+}

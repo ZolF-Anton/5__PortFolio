@@ -1,6 +1,6 @@
 @mixin before_circle {
-    &:before {
-        content:"";
+    &::before {
+        content: '';
         position: absolute;
         width: 36px;
         height: 36px;
@@ -9,5 +9,5 @@
         z-index: -1;
         top: -24%;
         left: 0;
-    }  
+    }
 }
