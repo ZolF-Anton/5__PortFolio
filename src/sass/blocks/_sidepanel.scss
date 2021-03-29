@@ -25,8 +25,8 @@
     }
     &__link svg {
         transition: ease-in 750ms;
-        width: 22px;
-        height: 22px;
+        //width: 22px;
+        //height: 22px;
         &:hover {
             transition: ease-in 750ms;
             transform: rotate(90deg);
@@ -55,10 +55,14 @@
 }
 
 .svg_telegram svg {
-    fill: rgb(36, 103, 165);
     transform: rotate(-90deg);
+    fill: #ffffff;
+
     &:hover {
         fill: #21212180;
         transform: rotate(0deg);
+        circle {
+            fill: #21212180;
+        }
     }
 }
