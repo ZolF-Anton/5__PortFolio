@@ -1,9 +1,10 @@
 .price {
-    margin-top: 60px;
+    padding-top: 60px;
     &__wrapper {
         padding: 60px 75px 0 75px;
         display: grid;
-        grid-template: repeat(3, 44px) / minmax(auto, 360px) minmax(auto, 360px);
+        //grid-template: repeat(3, 44px) / minmax(auto, 360px) minmax(auto, 360px);
+        grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
         grid-auto-rows: minmax(44px, auto);
         justify-content: space-between;
         align-content: space-between;
